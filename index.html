@@ -76,13 +76,12 @@ body.clean .gap{display:none}
 .stats b{display:block;font:400 44px/1 'Dela';color:var(--lime)}
 .stats span{font-size:14px;color:var(--muted)}
 /* quote */
-.quote{background:var(--lime);color:#111;border-radius:40px;margin:0 16px;padding:80px 0}
-.qg{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:start}
-.qg>*{min-width:0}
-.qm{font:400 160px/0.8 'Dela'}
-.quote blockquote{font:400 clamp(26px,3vw,44px)/1.15 'Dela';margin-bottom:24px}
-.quote p{font-size:18px;max-width:780px}
-.quote cite{display:block;font-style:normal;font-weight:700;margin-top:18px}
+.how{background:var(--lime);color:#111;border-radius:40px;margin:0 16px;padding:56px 0}
+.hw{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.hw>*{min-width:0}
+.hw b{display:block;font:400 54px/1 'Dela';margin-bottom:16px}
+.hw h3{font-size:28px;margin-bottom:8px}
+.hw p{font-size:17px;max-width:360px}
 /* showcase */
 .bar{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:28px}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
@@ -193,7 +192,7 @@ body.at-top #gapsToggle{opacity:0;pointer-events:none}
 body{font-size:17px}
 .wrap{padding:0 16px}
 .pad{padding:80px 0}
-.head,.hg,.qg,.fm,.soon,.why{grid-template-columns:1fr;gap:24px}
+.head,.hg,.fm,.soon,.why{grid-template-columns:1fr;gap:24px}
 .head{margin-bottom:30px}
 .top .wrap{gap:10px;height:62px}
 .top .btn{display:none}
@@ -206,8 +205,9 @@ body{font-size:17px}
 .reel .pl{width:38px;height:38px}
 .stats{gap:24px}
 .stats b{font-size:32px}
-.quote{margin:0 8px;border-radius:30px;padding:56px 0}
-.qm{font-size:90px}
+.how{margin:0 8px;border-radius:30px;padding:40px 0}
+.hw{grid-template-columns:1fr;gap:24px}
+.hw b{font-size:38px;margin-bottom:8px}
 .grid{grid-template-columns:1fr}
 .card.big{grid-column:auto;flex-direction:column}
 .card.big .ph{min-height:0;aspect-ratio:4/3;flex:none}
@@ -246,14 +246,11 @@ form .r2{grid-template-columns:1fr}
   </div>
 </section>
 
-<section class="quote" data-r>
-  <div class="wrap qg">
-    <div class="qm">“</div>
-    <div>
-      <blockquote data-i="q1">А велик 360 видели? А липкую стену видели? А интерактивный пол? Они такие: а что это такое?</blockquote>
-      <p data-i="q2">Раньше ответом было видео с производства в личку. Теперь это одна ссылка: короткое видео, понятное описание, размеры. Её можно посмотреть самому, показать жене и переслать партнёру.</p>
-      <cite data-i="q3">Роман Сотников, основатель UNITRAMP</cite>
-    </div>
+<section class="how" data-r>
+  <div class="wrap hw">
+    <div><b>01</b><h3 data-i="hw1">Смотрите</h3><p data-i="hw1d">Короткое видео и понятное описание: как работает, для кого, сколько места нужно.</p></div>
+    <div><b>02</b><h3 data-i="hw2">Отмечайте</h3><p data-i="hw2d">Сердечком собираете подборку фишек для своего парка.</p></div>
+    <div><b>03</b><h3 data-i="hw3">Пересылайте</h3><p data-i="hw3d">Одна ссылка на фишку или на всю подборку: партнёру, семье, управляющему.</p></div>
   </div>
 </section>
 
@@ -266,7 +263,7 @@ form .r2{grid-template-columns:1fr}
     <div class="bar"><div class="chips" id="chips"></div><label class="sw"><input type="checkbox" id="vOnly"><s></s><span data-i="vonly">Только с видео</span></label></div>
     <div class="grid" id="grid"></div>
     <div class="soon">
-      <div class="soonc" data-r><div class="ic">360</div><div><h3 data-i="s1t">Велосипед 360°</h3><p data-i="s1d">Роман показывает его собственникам первым. Добавим, как только будет видео.</p><span class="gap">видео и описание</span></div></div>
+      <div class="soonc" data-r><div class="ic">360</div><div><h3 data-i="s1t">Велосипед 360°</h3><p data-i="s1d">Добавим описание и видео, как только они будут готовы.</p><span class="gap">видео и описание</span></div></div>
       <div class="soonc" data-r><div class="ic">✋</div><div><h3 data-i="s2t">Липкая стена</h3><p data-i="s2d">Гость в специальном костюме прилипает к стене после прыжка.</p><span class="gap">видео, описание, есть ли в линейке</span></div></div>
     </div>
   </div>
@@ -321,9 +318,9 @@ var UI={
  en:{h1:'<span class="w">Have</span> <span class="w">you</span> <span class="w">seen</span> <span class="w q">this?</span>',all:'All',reelV:'video',share:'Share',like:'Add to list',liked:'In your list',video:'Video',noVideo:'Video soon',copied:'Link copied',pbN:function(n){return 'In your list: '+n},empty:'Tap the heart on any card to build a list',roles:['Mall owner','Investor','Park owner','Partner / dealer','Other'],price:'Catalogue price',watch:'Watch video',close:'Close'}
 };
 var T={en:{nav1:'Showcase',nav2:'Why it works',nav3:'See it live',cta0:'I want it in my park',k0:'Entertainment industry highlights',lead0:'Attractions that make guests ask “what is that?”. Photos, videos and specs in one place. Watch and forward to your partner with one link.',cta1:'See the highlights',cta2:'Build a list',st1:'solutions in the showcase',st2:'with video',st3:'park zones',
- q1:'Seen the 360 bike? The sticky wall? The interactive floor? People ask: what on earth is that?',q2:'We used to answer with a shaky factory video in a private chat. Now it is one link: a short video, a clear description, dimensions. Watch it yourself, show your family, forward it to your partner.',q3:'Roman Sotnikov, UNITRAMP founder',
+ hw1:'Watch',hw1d:'A short video and a clear description: how it works, who it is for, how much space it needs.',hw2:'Save',hw2d:'Heart the highlights to build a list for your park.',hw3:'Share',hw3d:'One link to a single highlight or your whole list: for your partner, family or park manager.',
  k1:'Showcase',h2a:'Highlights for every park zone',l1:'Tap a card to see the video and description. Heart the ones you like: they form a list you can forward.',vonly:'Video only',
- s1t:'360° bike',s1d:'The first thing Roman shows mall owners. Coming as soon as we have the video.',s2t:'Sticky wall',s2d:'A guest in a special suit sticks to the wall after a jump.',
+ s1t:'360° bike',s1d:'Description and video coming soon.',s2t:'Sticky wall',s2d:'A guest in a special suit sticks to the wall after a jump.',
  k2:'Why it works',h2b:'What one strong highlight gives a park',w1t:'Wow from the entrance',w1d:'The Infinity floor is a ready-made photo spot, “The Floor is Lava” brings the whole family together, Ladder 360 challenges kids and adults alike. People film it and post it.',w2t:'Competition and rankings',w2d:'CardioWall, Touch Arena and AeroStrike keep score and leaderboards. Guests come back to beat their record.',w3t:'No extra staff',w3d:'AeroStrike runs without an instructor, CardioWall and Touch Arena keep score on their own. No separate shift needed.',
  k3:'See it live',h2c:'We will send videos or show it working',l3:'A manager will send the clips via Telegram or WhatsApp and tell you where to see the attraction in a working park.',pk:'Your list',fn:'Name',fp:'Phone, Telegram or WhatsApp',fc:'City, country',fr:'You are',fa:'Park or venue area, m²',agree:'By pressing the button you agree to the processing of personal data.',send:'Get the videos',ok1:'Done',ok2:'This is a prototype: nothing was sent. On the live site the request goes to a manager together with your list.',foot:'Descriptions and specs: unitramp.ru catalogue.',pbcopy:'Copy link',pbsend:'Send to manager'}};
 var RU={};$$('[data-i]').forEach(function(e){RU[e.dataset.i]=e.innerHTML});
