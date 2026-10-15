@@ -6,6 +6,7 @@
 <title>UNITRAMP · Фишки индустрии развлечений</title>
 <meta name="description" content="Необычные аттракционы для активити-парков: спинер, интерактивный волейбол, пол-лава, сухой аквапарк и другие. Фото, видео, характеристики. RU / EN.">
 <style>
+html{overflow-x:clip}
 @font-face{font-family:'Dela';src:url(assets/fonts/DelaGothic.ttf) format('truetype');font-display:swap}
 @font-face{font-family:'Rubik';src:url(assets/fonts/Rubik.ttf) format('truetype');font-weight:300 900;font-display:swap}
 :root{--bg:#0F0F12;--card:#1A1A21;--card2:#23232C;--ink:#F4F4F6;--muted:#9A9AA8;--line:#2E2E38;--lime:#D6FF3D;--pink:#FF3D8B;--r:26px}
@@ -303,7 +304,7 @@ form .r2{grid-template-columns:1fr}
   </div>
 </section>
 
-<footer><div class="wrap"><span>© UNITRAMP, 2014–2026</span><span data-i="foot">Описания и характеристики: каталог unitramp.ru. Цены каталога <span class="gap ok">актуальность цен</span></span></div></footer>
+<footer><div class="wrap"><span>© UNITRAMP, 2014–2026</span><span data-i="foot">Описания и характеристики: каталог unitramp.ru. Цены каталога</span></div></footer>
 
 <div class="pickbar" id="pickbar"><b id="pbN"></b><button class="btn" id="pbCopy" data-i="pbcopy">Скопировать ссылку</button><a class="btn p" href="#form" data-i="pbsend">Отправить менеджеру</a></div>
 <div class="toast" id="toast"></div>
@@ -411,7 +412,7 @@ $('#pbCopy').addEventListener('click',function(){share('pick='+pick.join(','))})
 function toast(t){var x=$('#toast');x.textContent=t;x.classList.add('show');clearTimeout(x._t);x._t=setTimeout(function(){x.classList.remove('show')},1800)}
 /* modal */
 function openM(id,play){var x=BY[id],t=txt(x);var media=x.yt?'<img src="assets/img/'+x.img+'.jpg" alt="'+t.n+'" id="mImg"><button class="btn" id="mPlay" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2">▶ '+UI[L].watch+'</button>':'<img src="assets/img/'+x.img+'.jpg" alt="'+t.n+'">';
- $('#mbox').innerHTML='<div class="mmedia" id="mMedia">'+media+'<button class="mx" id="mx" aria-label="'+UI[L].close+'">×</button></div><div class="mbd"><span class="cat" style="color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.08em;font-weight:600">'+catName(x.c)+'</span><h3>'+t.n+'</h3><p style="color:var(--ink)">'+t.h+'</p><p>'+t.d+'</p><div class="specs">'+t.s.map(function(s){return'<span>'+s+'</span>'}).join('')+'</div>'+(x.pr?'<p class="mnov">'+UI[L].price+': <b style="color:var(--lime)">'+x.pr+'</b></p>':'')+(x.yt?'':'<p class="mnov">'+UI[L].noVideo+' <span class="gap">видео</span></p>')+'<div class="acts">'+likeBtn(id)+'<button class="ib" data-share="'+id+'">↗ '+UI[L].share+'</button></div></div>';
+ $('#mbox').innerHTML='<div class="mmedia" id="mMedia">'+media+'<button class="mx" id="mx" aria-label="'+UI[L].close+'">×</button></div><div class="mbd"><span class="cat" style="color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.08em;font-weight:600">'+catName(x.c)+'</span><h3>'+t.n+'</h3><p style="color:var(--ink)">'+t.h+'</p><p>'+t.d+'</p><div class="specs">'+t.s.map(function(s){return'<span>'+s+'</span>'}).join('')+'</div>'+(x.pr?'<p class="mnov">'+UI[L].price+': <b style="color:var(--lime)">'+x.pr+'</b></p>':'')+(x.yt?'':'<p class="mnov">'+UI[L].noVideo+'</p>')+'<div class="acts">'+likeBtn(id)+'<button class="ib" data-share="'+id+'">↗ '+UI[L].share+'</button></div></div>';
  $('#mod').classList.add('show');document.body.style.overflow='hidden';
  var p=$('#mPlay');if(p){p.addEventListener('click',function(){playV(x.yt)});if(play)playV(x.yt)}
 }
