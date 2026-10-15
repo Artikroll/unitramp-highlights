@@ -67,11 +67,11 @@ body.clean .gap{display:none}
 .reel .rt span{font-size:13px;color:#ddd}
 .reel .pl{position:absolute;right:16px;top:16px;z-index:2;width:46px;height:46px;border-radius:50%;background:var(--lime);display:grid;place-items:center}
 .reel .pl:after{content:"";border-left:13px solid #111;border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:3px}
-.r1{left:2%;top:60px;transform:rotate(-8deg) translateY(60px)}.loaded .r1{transform:rotate(-8deg)}
-.r2{left:31%;top:0;z-index:2;transform:rotate(2deg) translateY(60px);transition-delay:.12s}.loaded .r2{transform:rotate(2deg)}
-.r3{left:60%;top:80px;transform:rotate(9deg) translateY(60px);transition-delay:.24s}.loaded .r3{transform:rotate(9deg)}
+.rl1{left:2%;top:60px;transform:rotate(-8deg) translateY(60px)}.loaded .rl1{transform:rotate(-8deg)}
+.rl2{left:31%;top:0;z-index:2;transform:rotate(2deg) translateY(60px);transition-delay:.12s}.loaded .rl2{transform:rotate(2deg)}
+.rl3{left:60%;top:80px;transform:rotate(9deg) translateY(60px);transition-delay:.24s}.loaded .rl3{transform:rotate(9deg)}
 .reel:hover{z-index:5}
-.loaded .r1:hover{transform:rotate(-4deg) scale(1.04)}.loaded .r2:hover{transform:rotate(0) scale(1.04)}.loaded .r3:hover{transform:rotate(5deg) scale(1.04)}
+.loaded .rl1:hover{transform:rotate(-4deg) scale(1.04)}.loaded .rl2:hover{transform:rotate(0) scale(1.04)}.loaded .rl3:hover{transform:rotate(5deg) scale(1.04)}
 .stats{display:flex;gap:40px;margin-top:46px;flex-wrap:wrap}
 .stats b{display:block;font:400 44px/1 'Dela';color:var(--lime)}
 .stats span{font-size:14px;color:var(--muted)}
@@ -201,7 +201,7 @@ body{font-size:17px}
 .hero{padding:100px 0 40px}
 .reels{height:420px}
 .reel{width:200px;border-radius:20px}
-.r1{left:0;top:40px}.r2{left:26%;top:0}.r3{left:auto;right:0;top:56px}
+.rl1{left:0;top:40px}.rl2{left:26%;top:0}.rl3{left:auto;right:0;top:56px}
 .reel .rt b{font-size:15px}
 .reel .pl{width:38px;height:38px}
 .stats{gap:24px}
@@ -276,9 +276,9 @@ form .r2{grid-template-columns:1fr}
   <div class="wrap">
     <div class="head"><div><div class="kick" data-i="k2">Зачем фишки</div><h2 data-i="h2b">Что даёт парку одна сильная фишка</h2></div></div>
     <div class="why">
-      <div data-r><b>01</b><h3 data-i="w1t">Вау-эффект с порога</h3><p data-i="w1d">«Спинер» из телешоу Wipe Out производит вау-эффект и на детей, и на взрослых. Такой аттракцион снимают на видео и выкладывают в сеть.</p></div>
+      <div data-r><b>01</b><h3 data-i="w1t">Вау-эффект с порога</h3><p data-i="w1d">Инфинити-пол работает как готовая фотозона, «Пол — это лава» собирает всю семью, «Лестница 360» проверяет на ловкость и детей, и взрослых. Такое снимают на видео и выкладывают в сеть.</p></div>
       <div data-r><b>02</b><h3 data-i="w2t">Соревнование и рейтинг</h3><p data-i="w2d">CardioWall, Touch Arena, AeroStrike считают очки и ведут таблицу. Гость возвращается побить свой рекорд.</p></div>
-      <div data-r><b>03</b><h3 data-i="w3t">Без лишнего персонала</h3><p data-i="w3d">AeroStrike работает без инструктора, «Спинер» может работать без оператора. Фишка не требует отдельной смены сотрудников.</p></div>
+      <div data-r><b>03</b><h3 data-i="w3t">Без лишнего персонала</h3><p data-i="w3d">AeroStrike работает без инструктора, CardioWall и Touch Arena сами считают очки и ведут таблицу. Фишка не требует отдельной смены сотрудников.</p></div>
     </div>
   </div>
 </section>
@@ -324,10 +324,10 @@ var T={en:{nav1:'Showcase',nav2:'Why it works',nav3:'See it live',cta0:'I want i
  q1:'Seen the 360 bike? The sticky wall? The interactive floor? People ask: what on earth is that?',q2:'We used to answer with a shaky factory video in a private chat. Now it is one link: a short video, a clear description, dimensions. Watch it yourself, show your family, forward it to your partner.',q3:'Roman Sotnikov, UNITRAMP founder',
  k1:'Showcase',h2a:'Highlights for every park zone',l1:'Tap a card to see the video and description. Heart the ones you like: they form a list you can forward.',vonly:'Video only',
  s1t:'360° bike',s1d:'The first thing Roman shows mall owners. Coming as soon as we have the video.',s2t:'Sticky wall',s2d:'A guest in a special suit sticks to the wall after a jump.',
- k2:'Why it works',h2b:'What one strong highlight gives a park',w1t:'Wow from the entrance',w1d:'The Spinner from the Wipe Out TV show wows kids and adults alike. People film it and post it.',w2t:'Competition and rankings',w2d:'CardioWall, Touch Arena and AeroStrike keep score and leaderboards. Guests come back to beat their record.',w3t:'No extra staff',w3d:'AeroStrike runs without an instructor, the Spinner can run without an operator. No separate shift needed.',
+ k2:'Why it works',h2b:'What one strong highlight gives a park',w1t:'Wow from the entrance',w1d:'The Infinity floor is a ready-made photo spot, “The Floor is Lava” brings the whole family together, Ladder 360 challenges kids and adults alike. People film it and post it.',w2t:'Competition and rankings',w2d:'CardioWall, Touch Arena and AeroStrike keep score and leaderboards. Guests come back to beat their record.',w3t:'No extra staff',w3d:'AeroStrike runs without an instructor, CardioWall and Touch Arena keep score on their own. No separate shift needed.',
  k3:'See it live',h2c:'We will send videos or show it working',l3:'A manager will send the clips via Telegram or WhatsApp and tell you where to see the attraction in a working park.',pk:'Your list',fn:'Name',fp:'Phone, Telegram or WhatsApp',fc:'City, country',fr:'You are',fa:'Park or venue area, m²',agree:'By pressing the button you agree to the processing of personal data.',send:'Get the videos',ok1:'Done',ok2:'This is a prototype: nothing was sent. On the live site the request goes to a manager together with your list.',foot:'Descriptions and specs: unitramp.ru catalogue.',pbcopy:'Copy link',pbsend:'Send to manager'}};
 var RU={};$$('[data-i]').forEach(function(e){RU[e.dataset.i]=e.innerHTML});
-var CATS=[{id:'all'},{id:'tr',ru:'Батутная зона',en:'Trampoline zone'},{id:'nj',ru:'Ниндзя',en:'Ninja'},{id:'ia',ru:'Интерактив',en:'Interactive'},{id:'kd',ru:'Для малышей',en:'Toddlers'},{id:'bg',ru:'Горки и лабиринты',en:'Slides and mazes'}];
+var CATS=[{id:'all'},{id:'nj',ru:'Ниндзя',en:'Ninja'},{id:'ia',ru:'Интерактив',en:'Interactive'},{id:'kd',ru:'Для малышей',en:'Toddlers'},{id:'bg',ru:'Горки и лабиринты',en:'Slides and mazes'},{id:'tr',ru:'Батутная зона',en:'Trampoline zone'}];
 var F=[
  {id:'spinner',c:'tr',img:'spinner',yt:'0Jrhvyy0Ylo',tag:'hit',big:1,pr:'600 000 ₽',
   ru:{n:'Батутная арена «Спинер»',h:'Аттракцион из телешоу Wipe Out: вращающаяся балка, через которую нужно перепрыгнуть.',d:'Ручной и автоматический режимы вращения, регулировка скорости и направления. Может работать без оператора, но с инструктором в ручном режиме становится главной игровой зоной парка. Подходит для зала и улицы.',s:['Дети и взрослые','Ручной и авто режим','Зал и улица']},
@@ -384,11 +384,12 @@ var F=[
   ru:{n:'Горка-вулкан «Неон»',h:'Вулкан с «лавой»: наверх по канатам, вниз по закрытой горке.',d:'Диаметр основания 8 м, высота 4,5 м. На вершине смотровая площадка, подъём по лестнице и канатам.',s:['Ø 8 м','Высота 4,5 м','Смотровая площадка']},
   en:{n:'“Neon” volcano slide',h:'A lava-style volcano: up the ropes, down the enclosed slide.',d:'Base diameter 8 m, height 4.5 m. Viewing deck at the top, ladder and rope climb.',s:['Ø 8 m','4.5 m tall','Viewing deck']}}
 ];
+var ORD={nj:0,ia:1,kd:2,bg:3,tr:4};F.sort(function(a,b){return ORD[a.c]-ORD[b.c]});
 var BY={};F.forEach(function(x){BY[x.id]=x});
 var cat='all',pick=[];
 function txt(x){return x[L]}
 /* reels */
-function reels(){var ids=['spinner','lava','ladder'];$('#reels').innerHTML=ids.map(function(id,i){var x=BY[id];return'<div class="reel r'+(i+1)+'" data-id="'+id+'"><img src="assets/img/'+x.img+'.jpg" alt="'+txt(x).n+'">'+(x.yt?'<span class="pl"></span>':'')+'<div class="rt"><b>'+txt(x).n+'</b><span>'+catName(x.c)+'</span></div></div>'}).join('')}
+function reels(){var ids=['lava','ladder','aqua'];$('#reels').innerHTML=ids.map(function(id,i){var x=BY[id];return'<div class="reel rl'+(i+1)+'" data-id="'+id+'"><img src="assets/img/'+x.img+'.jpg" alt="'+txt(x).n+'">'+(x.yt?'<span class="pl"></span>':'')+'<div class="rt"><b>'+txt(x).n+'</b><span>'+catName(x.c)+'</span></div></div>'}).join('')}
 function catName(c){var k=CATS.filter(function(q){return q.id==c})[0];return k[L]||UI[L].all}
 /* chips */
 function chips(){$('#chips').innerHTML=CATS.map(function(c){var n=c.id=='all'?F.length:F.filter(function(x){return x.c==c.id}).length;return'<button class="chip'+(c.id==cat?' on':'')+'" data-c="'+c.id+'">'+(c[L]||UI[L].all)+'<i>'+n+'</i></button>'}).join('')}
